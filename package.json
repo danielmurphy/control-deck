@@ -1,0 +1,9 @@
+{
+  "name": "control-deck",
+  "version": "1.0.0",
+  "description": "A node app for interfacing with a Stream Deck",
+  "main": "index.js",
+  "author": "Daniel Murphy",
+  "license": "MIT",
+  "private": false
+}
