@@ -5,5 +5,8 @@
   "main": "index.js",
   "author": "Daniel Murphy",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "elgato-stream-deck": "^2.1.1"
+  }
 }
