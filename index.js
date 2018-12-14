@@ -2,7 +2,8 @@ const path = require('path');
 const StreamDeck = require('elgato-stream-deck');
 
 class ControlDeck {
-	constructor(buttonLayoutPath) {
+	constructor(buttonLayoutPath, options = {}) {
+		this.debug = !!options.debug;
 		this.streamDeck = new StreamDeck();
 		this.streamDeck.clearAllKeys();
 
@@ -18,15 +19,19 @@ class ControlDeck {
 	}
 
 	_initButton(buttonId, buttonData) {
-		console.log('initiating button ${buttonId}');
+		console.log(`initiating button ${buttonId}`);
 
-		let tool = require(path.resolve(
-			path.dirname(require.main.filename),
-			'node_modules',
-			buttonData.tool
-		));
-
-		new tool(this.streamDeck, buttonId, buttonData.options);
+		try {
+			let plugin = require(path.resolve(
+				path.dirname(require.main.filename),
+				'node_modules',
+				buttonData.plugin
+			));
+			new plugin(this.streamDeck, buttonId, buttonData.options);
+		} catch (error) {
+			console.log(`Couldn't initialize button ${buttonId}`);
+			console.log(error);
+		}
 	}
 }
 
