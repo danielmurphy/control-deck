@@ -13,8 +13,8 @@ First, create a new app
 ```
 mkdir myapp
 cd myapp
-npm add control-deck
-npm add control-deck-media-controls
+npm install control-deck
+npm install control-deck-media-controls
 touch myapp.js
 touch button-layout.json
 ```
