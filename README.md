@@ -2,6 +2,10 @@
 
 An extensible node app for easily customizing an Elgato Stream Deck. Setup is all done via a JSON file and various Control Deck plugins.
 
+## Demo
+
+[![Demo Video](https://monosnap.com/image/S9jB6PXMjGzFdWk8m3cffTyCA58DEX.png)](https://www.youtube.com/watch?v=GSKKFIf7Y98)
+
 ## Example
 
 First, create a new app
