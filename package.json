@@ -1,6 +1,6 @@
 {
   "name": "control-deck",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A node app for interfacing with a Stream Deck",
   "main": "index.js",
   "repository": "https://github.com/danielmurphy/control-deck",
